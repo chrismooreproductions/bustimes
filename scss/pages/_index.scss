@@ -1,0 +1,132 @@
+body {
+    margin: 15px 0;
+    [id^=results] {
+        display: flex;
+        flex-direction: column;
+        display: none;
+        .times {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            height: 55px;
+            border-radius: 3px;
+            margin-bottom: 4px;
+            padding-left: 5px;
+            padding-right: 5px;
+            background-color: rgba(34,34,34,0.81);
+            color: yellow;
+            .line-name {
+                min-width: 42px;
+                text-align: left;
+            }
+            .direction {
+                white-space: nowrap;
+                overflow: scroll;
+                text-transform: uppercase;
+            }
+            .expected-time {
+                min-width: 55px;
+                text-align: right;
+            }
+        }
+    }
+    .results-heading {
+        padding-left: 7px;
+        padding-right: 7px;
+        border: 1px solid gray;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        background-color: #f2f4f4;
+    }
+    .search, .results-heading {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #map {
+        height: 620px;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+    #output-data {
+        height: 485px;
+        overflow: scroll;
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 0px 8px;
+        background-color: #f2f4f4;
+    }
+    .results-heading {
+        > form {
+            background-color: white;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            padding: 4px 0;
+            display: flex;
+            // font-size: 20px;
+            > input[type="text"] {
+                width: 100%;
+                border: 0px;
+            }
+            > button {
+                border: 0px;
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    #output-data {
+        .stop {
+            display: flex;
+            flex-direction: row;
+            margin: 7px 0;
+            line-height: 32px;
+            cursor: pointer;
+            &:hover {
+                .letter {
+                    background-color: lighten(#f76155, 15%);
+                }
+                .information {
+                    background-color: lighten(#0ea4fa, 10%);
+                }
+            }
+            .letter {
+                width: 64px;
+                border: 2px solid black;
+                border-radius: 32px;
+                text-align: center;
+                padding: 5px;
+                background-color: #f76155;
+                transition: 0.2s all ease-in-out;
+
+            }
+            .location-name {
+                margin: 0 8px;
+                padding: 5px 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                width: 100%;
+                white-space: nowrap;
+                overflow: scroll;
+                background-color: white;
+
+            }
+            .information {
+                @extend .letter;
+                background-color: #0ea4fa;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        #output-data {
+            margin-bottom: 15px;
+            height: 325px;
+        }
+        #map {
+            height: 450px;
+        }
+    }
+}
