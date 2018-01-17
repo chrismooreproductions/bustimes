@@ -15,8 +15,7 @@ I will adapt the app to use interfaces as it could be fairly easily updated
 to consider trains and trams too (each public transport stop has an atco
 code.
 
-This is an ongoing project as a demonstrator of stuff I can build while I'm 
-not at work.
+This is an ongoing project as a demonstrator of stuff I can build.
 
 *********************************
 *                               *
